@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`changes the class when hovered 1`] = `
+<div>
+  <div>
+    <img
+      src="https://image.com"
+    />
+    <span>
+      £
+      12,000
+    </span>
+    <div>
+      <div>
+        test
+      </div>
+      <div>
+        PLay
+      </div>
+    </div>
+  </div>
+</div>
+`;

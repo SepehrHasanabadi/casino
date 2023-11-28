@@ -11,8 +11,8 @@ import { Jackpot } from './models/jackpot';
 
 function App() {
   const [active, setActive] = useState(HeaderName.top);
-  const [games, setGames] = ApiCall<GameModel[]>(API.GET_GAMES, { method: "GET"});
-  const [jackpots, setJackpots] = ApiCall<Jackpot[]>(API.GET_JACKPOTS, { method: "GET"}, 4000);
+  const [games] = ApiCall<GameModel[]>(API.GET_GAMES, { method: "GET"});
+  const [jackpots] = ApiCall<Jackpot[]>(API.GET_JACKPOTS, { method: "GET"}, 4000);
 
   return (
     <>
