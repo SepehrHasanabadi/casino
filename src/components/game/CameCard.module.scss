@@ -1,0 +1,90 @@
+@import '../style.scss';
+
+.item {
+  @include devices(tablet) {
+    margin: 1rem;
+    padding-top: 1rem;
+  }
+  @include devices(desktop) {
+    &:hover .overlay {
+      opacity: 0.8;
+    }
+  }
+
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  position: relative;
+  height: 10rem;
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    border-radius: 1rem;
+    transition: .5s ease;
+    background-color: #000;
+  }
+
+  .play {
+    color: white;
+    text-align: center;
+    font-weight: 800;
+    margin-left: 1rem;
+    margin-top: 0.5rem;
+    background: red;
+    width: 5rem;
+    padding-block: 0.5rem;
+    border-radius: 1rem;
+  }
+
+  .name {
+    margin-left: 1rem;
+    margin-top: 2rem;
+    color: white;
+  }
+
+ 
+}
+
+.ribbon {
+  @include devices(tablet) {
+    top: 15px;
+  }
+  width: 60px;
+  font-size: 14px;
+  padding: 4px;
+  position: absolute;
+  right: -10px;
+  top:0px;
+  text-align: center;
+  border-radius: 25px;
+  transform: rotate(30deg);
+  background-color: #ff9800;
+  color: white;
+}
+
+.jackpot {
+  width: 100%;
+  right: 0;
+  border-top-right-radius: 1rem;
+  border-top-left-radius: 1rem;
+  font-size: 14px;
+  padding-block: 1rem;
+  font-weight: 600;
+  position: absolute;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+}
+
+.image {
+  border-radius: 1rem;
+  width: 100%;
+  height: 100%;
+}

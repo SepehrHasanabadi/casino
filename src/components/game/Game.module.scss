@@ -1,0 +1,13 @@
+@import '../style.scss';
+
+.grid {
+  @include devices(tablet) {
+    display: inline;
+  }
+
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  padding-inline: 10rem;
+  padding-block: 4rem;
+  gap: 1rem;
+}

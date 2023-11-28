@@ -1,25 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
+import Header from './components/header/Header';
+import { CategoryName } from './models/category';
+import Game from './components/game/Game';
+import { ApiCall } from './helpers/ApiCall';
+import { Game as GameModel } from './models/game';
+import { API } from './constants/api';
+import { HeaderName } from './models/header';
+import { Jackpot } from './models/jackpot';
 
 function App() {
+  const [active, setActive] = useState(HeaderName.top);
+  const [games, setGames] = ApiCall<GameModel[]>(API.GET_GAMES, { method: "GET"});
+  const [jackpots, setJackpots] = ApiCall<Jackpot[]>(API.GET_JACKPOTS, { method: "GET"}, 4000);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header active={active} setActive={setActive}/>
+      <Game games={games} active={active} jackpots={jackpots}/>
+    </>
   );
 }
 

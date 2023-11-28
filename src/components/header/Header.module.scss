@@ -1,0 +1,32 @@
+@import '../style.scss';
+
+.row {
+  @include devices(tablet) {
+    display: inline;
+    position: absolute;
+  }
+
+  display: flex;
+  background: #373737;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  .col {
+    flex: 1;
+    height: 100%;
+    padding: 1rem;
+    cursor: pointer;
+    &:hover {
+      background: #272727;
+    }
+  }
+  .select {
+    background: #8DC63F;
+    &:hover {
+      background: #81b439;
+    }
+  }
+}
