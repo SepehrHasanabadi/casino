@@ -1,6 +1,6 @@
 
-![alt text](https://github.com/SepehrHasanabadi/jira/blob/main/images/desktop.png)
-![alt text](https://github.com/SepehrHasanabadi/jira/blob/main/images/tablet.png)
+![alt text](https://github.com/SepehrHasanabadi/casino/blob/main/images/desktop.png)
+![alt text](https://github.com/SepehrHasanabadi/casino/blob/main/images/tablet.png)
 
 ## Available Scripts
 
